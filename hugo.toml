@@ -1,0 +1,35 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Brett Stark'
+theme = 'hugo-papermod'
+
+[params]
+  description = 'Technology, Space, Travel, and Photography'
+  author = 'Brett Stark'
+  tagline = 'Aussie in Chicago'
+
+[params.assets]
+  favicon = "/favicon.ico"
+  favicon16x16 = "/favicon-16x16.png"
+  favicon32x32 = "/favicon-32x32.png"
+  apple_touch_icon = "/apple-touch-icon.png"
+  safari_pinned_tab = "/safari-pinned-tab.svg"
+  
+[menu]
+  [[menu.main]]
+    name = 'Blog'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 20
+  [[menu.main]]
+    name = 'Contact'  
+    url = '/contact/'
+    weight = 30
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
