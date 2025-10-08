@@ -12,3 +12,4 @@ coverage
 *.lock
 package-lock.json
 yarn.lock
+.github

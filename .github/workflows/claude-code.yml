@@ -1,0 +1,89 @@
+name: Claude Code Integration
+
+on:
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  claude-code:
+    runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'issues' && contains(github.event.issue.body, '@claude'))
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Claude Code
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Install Claude Code CLI
+          npm install -g @anthropic-ai/claude-code
+
+          # Extract the task from the issue or comment
+          if [ "${{ github.event_name }}" = "issue_comment" ]; then
+            TASK="${{ github.event.comment.body }}"
+            ISSUE_NUMBER="${{ github.event.issue.number }}"
+          else
+            TASK="${{ github.event.issue.body }}"
+            ISSUE_NUMBER="${{ github.event.issue.number }}"
+          fi
+
+          # Remove @claude mention from task
+          TASK=$(echo "$TASK" | sed 's/@claude//g')
+
+          # Run Claude Code with the task
+          echo "$TASK" | claude-code --non-interactive
+
+          # If there are changes, create a PR
+          if ! git diff --quiet; then
+            BRANCH_NAME="claude-code/issue-${ISSUE_NUMBER}"
+            git config user.name "Claude Code Bot"
+            git config user.email "claude-code@anthropic.com"
+            git checkout -b "$BRANCH_NAME"
+            git add .
+            git commit -m "Implement changes for issue #${ISSUE_NUMBER}
+
+🤖 Generated with Claude Code
+
+Co-Authored-By: Claude <noreply@anthropic.com>"
+            git push origin "$BRANCH_NAME"
+
+            # Create PR
+            gh pr create \
+              --title "Fix issue #${ISSUE_NUMBER}" \
+              --body "Automated changes by Claude Code for issue #${ISSUE_NUMBER}" \
+              --base "${{ github.event.repository.default_branch }}" \
+              --head "$BRANCH_NAME"
+          fi
+
+      - name: Comment on issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = context.payload.issue.number;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: '✅ Claude Code has processed your request. Check the pull request for changes or review the workflow logs for details.'
+            });
