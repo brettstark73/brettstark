@@ -9,8 +9,12 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@test')) ||
+      (github.event_name == 'issues' && contains(github.event.issue.body, '@test'))
     steps:
       - name: Echo event
         run: |
           echo "Event: ${{ github.event_name }}"
           echo "Action: ${{ github.event.action }}"
+          echo "Condition matched!"
