@@ -29,7 +29,7 @@ if (fs.existsSync(packageJsonPath)) {
     version: '1.0.0',
     description: '',
     main: 'index.js',
-    scripts: {}
+    scripts: {},
   }
 }
 
@@ -38,8 +38,8 @@ console.log('📝 Adding quality automation scripts...')
 packageJson.scripts = {
   ...packageJson.scripts,
   prepare: 'husky install',
-  'format': 'prettier --write .',
-  'format:check': 'prettier --check .'
+  format: 'prettier --write .',
+  'format:check': 'prettier --check .',
 }
 
 // Add devDependencies
@@ -48,7 +48,7 @@ packageJson.devDependencies = {
   ...packageJson.devDependencies,
   husky: '^8.0.0',
   'lint-staged': '^15.0.0',
-  prettier: '^3.0.0'
+  prettier: '^3.0.0',
 }
 
 // Add lint-staged configuration
@@ -57,7 +57,7 @@ packageJson['lint-staged'] = {
   'package.json': ['prettier --write'],
   '**/*.{js,jsx,ts,tsx}': ['prettier --write'],
   '**/*.{html,css,scss}': ['prettier --write'],
-  '**/*.{json,md,yml,yaml}': ['prettier --write']
+  '**/*.{json,md,yml,yaml}': ['prettier --write'],
 }
 
 // Write updated package.json

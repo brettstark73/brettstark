@@ -13,3 +13,13 @@ coverage
 package-lock.json
 yarn.lock
 .github
+
+# Hugo specific
+layouts/
+themes/
+content/
+static/
+public/
+resources/
+hugo.toml
+*.toml
