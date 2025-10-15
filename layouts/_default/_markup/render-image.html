@@ -1,0 +1,65 @@
+{{/* Responsive image render hook with srcset, width/height, and sane fallbacks */}}
+{{- $u := urls.Parse .Destination -}}
+{{- $src := $u.String -}}
+{{- $alt := .Text | default .Title | default .Page.Title -}}
+{{- $loading := .Attributes.loading | default "lazy" -}}
+{{- $decoding := .Attributes.decoding | default "async" -}}
+
+{{- $imgRes := "" -}}
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path -}}
+  {{- with or (.PageInner.Resources.Get $path) (.Page.Resources.Get $path) (resources.Get $path) -}}
+    {{- $imgRes = . -}}
+  {{- end -}}
+  {{- if not $imgRes -}}
+    {{- with or (.PageInner.Resources.GetMatch $path) (.Page.Resources.GetMatch $path) -}}
+      {{- $imgRes = . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $imgRes -}}
+    {{- $base := path.Base $path -}}
+    {{- with or (.PageInner.Resources.GetMatch (printf "**/%s" $base)) (.Page.Resources.GetMatch (printf "**/%s" $base)) -}}
+      {{- $imgRes = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $imgRes -}}
+  {{/* Generate responsive variants */}}
+  {{- $sizes := slice 360 480 720 1080 -}}
+  {{- $variants := slice -}}
+  {{- range $w := $sizes -}}
+    {{- $v := $imgRes.Resize (printf "%dx" $w) -}}
+    {{- $variants = $variants | append (printf "%s %dw" $v.RelPermalink $v.Width) -}}
+  {{- end -}}
+  {{- $srcset := delimit $variants "," -}}
+  {{- $fallback := $imgRes -}}
+  {{- $width := $fallback.Width -}}
+  {{- $height := $fallback.Height -}}
+  <img src="{{ $fallback.RelPermalink }}"
+       srcset="{{ $srcset }}"
+       sizes="(min-width: 768px) 720px, 100vw"
+       width="{{ $width }}" height="{{ $height }}"
+       alt="{{ $alt }}"
+       loading="{{ $loading }}"
+       decoding="{{ $decoding }}">
+{{- else -}}
+  {{/* External or non-resource image; pass through with sensible attributes */}}
+  {{- $resolvedSrc := $src -}}
+  {{- if and (not $u.IsAbs) (or (strings.HasPrefix $src "images/") (strings.HasPrefix $src "./images/")) -}}
+    {{- $dir := "" -}}
+    {{- with .Page.File }}{{- $dir = .Dir -}}{{- end -}}
+    {{- if $dir -}}
+      {{- $resolvedSrc = (path.Join "/" $dir $src) -}}
+    {{- else -}}
+      {{- $resolvedSrc = (path.Join .Page.RelPermalink $src) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $attributes := merge .Attributes (dict "alt" $alt "src" $resolvedSrc "title" (.Title | transform.HTMLEscape) "loading" $loading "decoding" $decoding) -}}
+  <img
+    {{- range $k, $v := $attributes -}}
+      {{- if $v -}}
+        {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+      {{- end -}}
+    {{- end -}}>
+{{- end -}}

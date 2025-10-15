@@ -1,0 +1,15 @@
+{{/* Force noindex for non-production as per site.Params.env */}}
+{{- if ne site.Params.env "production" -}}
+<meta name="robots" content="noindex, nofollow">
+{{- end -}}
+
+{{/* Generate cropped/resized icons from brand headshot if available */}}
+{{- $headshot := resources.Get "brand/headshot.jpg" -}}
+{{- if $headshot -}}
+  {{- $apple := $headshot.Fill "180x180 Center" -}}
+  {{- $i32 := $headshot.Fill "32x32 Center" -}}
+  {{- $i16 := $headshot.Fill "16x16 Center" -}}
+  <link rel="apple-touch-icon" href="{{ $apple.RelPermalink }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ $i32.RelPermalink }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ $i16.RelPermalink }}">
+{{- end -}}
