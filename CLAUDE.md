@@ -43,8 +43,8 @@ npm run build        # Alias for hugo build command
 ```bash
 npm run format       # Format all files with Prettier
 npm run format:check # Check formatting (used in CI)
-npm run lint:scripts # ESLint for JavaScript/TypeScript
-npm run lint:styles  # Stylelint for CSS
+npm run lint         # ESLint + Stylelint combined
+npm run lint:fix     # Auto-fix linting issues
 npm run prepare      # Set up Husky git hooks
 ```
 

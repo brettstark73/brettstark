@@ -17,6 +17,6 @@ draft: true
 
 - $$: College!
 
-**Look for the Jo**y.
+**Look for the Joy**.
 
 ## Review

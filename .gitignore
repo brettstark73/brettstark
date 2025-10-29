@@ -5,3 +5,6 @@ server.log
 .DS_Store
 lighthouse-report.json
 node_modules
+
+# Lighthouse CI artifacts
+.lighthouseci/
