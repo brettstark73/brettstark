@@ -45,7 +45,11 @@ Output is generated under `public/`.
 
 - `npm run format` — format via Prettier
 - `npm run format:check` — CI-friendly format check
-- Optional (if configured): `npm run lint:scripts`, `npm run lint:styles`
+- `npm run lint` — run ESLint and Stylelint
+- `npm run lint:fix` — run linting with auto-fix
+- `npm run lighthouse:ci` — run Lighthouse CI for performance/SEO audits
+- `npm run security:audit` — check for npm security vulnerabilities
+- `npm run security:secrets` — scan for hardcoded secrets
 
 GitHub Actions runs quality checks under `.github/workflows/quality.yml`.
 

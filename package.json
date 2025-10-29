@@ -7,14 +7,14 @@
     "prepare": "husky",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "echo 'Add your linting command here'",
+    "lint": "eslint . --ext .js,.jsx,.mjs,.cjs && stylelint \"assets/**/*.{css,scss,sass,less,pcss}\" --allow-empty-input",
     "test": "echo 'Add your testing command here'",
     "setup": "node setup.js",
     "security:audit": "npm audit --audit-level high",
     "security:secrets": "node -e \"const fs=require('fs');const content=fs.readFileSync('package.json','utf8');if(/[\\\"\\'][a-zA-Z0-9+/]{20,}[\\\"\\']/.test(content)){console.error('❌ Potential hardcoded secrets in package.json');process.exit(1)}else{console.log('✅ No secrets detected in package.json')}\"",
     "lighthouse:ci": "lhci autorun",
     "lighthouse:upload": "lhci upload",
-    "lint:fix": "eslint . --ext .js,.jsx,.mjs,.cjs,.html --fix && stylelint \"{assets/**/*.{css,scss,sass,less,pcss},public/**/*.{css,scss,sass,less,pcss},themes/**/*.{css,scss,sass,less,pcss}}\" --fix --allow-empty-input"
+    "lint:fix": "eslint . --ext .js,.jsx,.mjs,.cjs --fix && stylelint \"assets/**/*.{css,scss,sass,less,pcss}\" --fix --allow-empty-input"
   },
   "keywords": [
     "quality",
@@ -28,6 +28,7 @@
   "author": "Brett Stark",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.38.0",
     "@lhci/cli": "^0.14.0",
     "eslint": "^9.12.0",
     "eslint-plugin-security": "^3.0.1",

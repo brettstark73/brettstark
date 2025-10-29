@@ -1,0 +1,19 @@
+[
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null,
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "structured-data",
+    "level": "warn",
+    "url": "http://localhost:64709/",
+    "auditTitle": "Structured data is valid",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/seo/structured-data/"
+  }
+]
