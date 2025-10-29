@@ -4,7 +4,10 @@
   "description": "Reusable quality automation setup with GitHub Actions, Husky, lint-staged, and Prettier",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky install",
+    "dev": "hugo server -D",
+    "dev:full": "hugo server -D --disableFastRender",
+    "build": "hugo --gc --minify",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint . --ext .js,.jsx,.mjs,.cjs && stylelint \"assets/**/*.{css,scss,sass,less,pcss}\" --allow-empty-input",
@@ -30,7 +33,7 @@
   "devDependencies": {
     "@eslint/js": "^9.38.0",
     "@lhci/cli": "^0.14.0",
-    "eslint": "^9.12.0",
+    "eslint": "^9.38.0",
     "eslint-plugin-security": "^3.0.1",
     "globals": "^15.9.0",
     "husky": "^8.0.0",
