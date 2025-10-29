@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://brettstark.com'
 languageCode = 'en-us'
 title = 'Brett Stark'
 theme = 'hugo-papermod'
@@ -7,6 +7,29 @@ theme = 'hugo-papermod'
   description = 'Technology, Space, Travel, and Photography'
   author = 'Brett Stark'
   tagline = 'Aussie in Chicago'
+
+  # SEO settings
+  env = 'production'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
+
+[params.homeInfoParams]
+  Title = "Welcome to Brett Stark's Blog"
+  Content = "Technology, Space, Travel, and Photography from an Aussie in Chicago"
+
 
 [params.assets]
   favicon = "/favicon.ico"

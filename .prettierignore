@@ -12,3 +12,5 @@ coverage
 *.lock
 package-lock.json
 yarn.lock
+/themes/
+/layouts/
