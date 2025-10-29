@@ -1,0 +1,110 @@
+{{/* Valid JSON-LD schema output using jsonify to avoid quoting bugs */}}
+{{- if .IsHome }}
+  {{- $sameAs := slice -}}
+  {{- if site.Params.schema.sameAs -}}
+    {{- $sameAs = site.Params.schema.sameAs -}}
+  {{- end -}}
+  {{- $publisherType := ( site.Params.schema.publisherType | default "Organization") | title -}}
+  {{- $logo := (site.Params.assets.logo | default (site.Params.assets.favicon | default "favicon.ico")) | absURL -}}
+  {{- with (resources.Get "brand/headshot.jpg") -}}
+    {{- $l := .Fill "256x256 Center" -}}
+    {{- $logo = $l.Permalink -}}
+  {{- end -}}
+  {{- $data := dict
+      "@context" "https://schema.org"
+      "@type" $publisherType
+      "name" site.Title
+      "url" site.Home.Permalink
+      "description" (site.Params.description | plainify | truncate 180)
+  -}}
+  {{- if eq (lower site.Params.schema.publisherType) "person" -}}
+    {{- $data = merge $data (dict "image" $logo) -}}
+  {{- else -}}
+    {{- $data = merge $data (dict "logo" $logo) -}}
+  {{- end -}}
+  {{- if gt (len $sameAs) 0 -}}
+    {{- $data = merge $data (dict "sameAs" $sameAs) -}}
+  {{- end -}}
+  <meta name="x-test" content="custom-schema">
+  <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- else if (or .IsPage .IsSection) }}
+  {{/* BreadcrumbList */}}
+  {{- $items := slice -}}
+  {{- $parent := .Parent -}}
+  {{- if $parent -}}
+    {{- $rel := replace $parent.Permalink (printf "%s" site.Home.Permalink) "" -}}
+    {{- $langrel := strings.TrimPrefix (printf "%s/" .Lang) $rel -}}
+    {{- $parts := split $langrel "/" -}}
+    {{- $pos := 1 -}}
+    {{- range $i, $p := $parts -}}
+      {{- if gt (len $p) 0 -}}
+        {{- $path := printf "%s/" $p -}}
+        {{- with site.GetPage $path -}}
+          {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Name "item" .Permalink) -}}
+          {{- $pos = add $pos 1 -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" (add (len $items) 1) "name" .Name "item" .Permalink) -}}
+  <meta name="x-test" content="custom-schema">
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items | jsonify | safeJS }}</script>
+
+  {{- if .IsPage -}}
+    {{/* BlogPosting */}}
+  {{- $img := "" -}}
+  {{- if .Params.cover.image -}}
+    {{- $c := .Params.cover.image -}}
+    {{- if or (strings.HasPrefix $c "http://") (strings.HasPrefix $c "https://") (strings.HasPrefix $c "/") -}}
+      {{- $img = ($c | absURL) -}}
+    {{- else -}}
+      {{- with .Resources.GetMatch $c -}}
+        {{- $img = .Permalink -}}
+      {{- else -}}
+        {{- if or (strings.HasPrefix $c "images/") (strings.HasPrefix $c "./images/") -}}
+          {{- $img = (path.Join .RelPermalink $c) | absURL -}}
+        {{- else -}}
+          {{- $img = ($c | absURL) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $images := partial "templates/_funcs/get-page-images" . -}}
+    {{- with index $images 0 -}}
+      {{- $img = .Permalink -}}
+    {{- end -}}
+  {{- end -}}
+    {{- $author := .Params.author | default site.Params.author -}}
+    {{- $authorList := slice -}}
+    {{- if (or (eq (printf "%T" $author) "[]string") (eq (printf "%T" $author) "[]interface {}")) -}}
+      {{- range $author -}}{{- $authorList = $authorList | append (dict "@type" "Person" "name" .) -}}{{- end -}}
+    {{- else -}}
+      {{- $authorList = $authorList | append (dict "@type" "Person" "name" $author) -}}
+    {{- end -}}
+    {{- $data := dict
+        "@context" "https://schema.org"
+        "@type" "BlogPosting"
+        "headline" (.Title | plainify)
+        "name" (.Title | plainify)
+        "description" ((.Description | plainify) | default (.Summary | plainify))
+        "keywords" (cond .Params.keywords .Params.keywords .Params.tags)
+        "articleBody" (.Content | plainify)
+        "wordCount" (printf "%d" .WordCount)
+        "inLanguage" (.Language.Lang | default "en-us")
+        "datePublished" .PublishDate
+        "dateModified" .Lastmod
+        "author" $authorList
+        "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+        "publisher" (dict
+          "@type" (( site.Params.schema.publisherType | default "Organization") | title)
+          "name" site.Title
+          "logo" (dict "@type" "ImageObject" "url" ((site.Params.assets.logo | default (site.Params.assets.favicon | default "favicon.ico")) | absURL))
+        )
+      -}}
+    {{- if $img -}}
+      {{- $data = merge $data (dict "image" $img) -}}
+    {{- end -}}
+    <meta name="x-test" content="custom-schema">
+    <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+  {{- end -}}
+{{- end -}}

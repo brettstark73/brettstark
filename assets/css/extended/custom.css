@@ -1,9 +1,9 @@
 .header .logo .tagline {
-    font-size: 0.85rem;
-    font-weight: normal;
-    font-style: italic;
-    display: inline;
-    margin-left: 10px;
-    color: var(--secondary);
-    opacity: 0.9;
+  font-size: 0.85rem;
+  font-weight: normal;
+  font-style: italic;
+  display: inline;
+  margin-left: 10px;
+  color: var(--secondary);
+  opacity: 0.9;
 }
