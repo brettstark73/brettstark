@@ -1,29 +1,31 @@
-{{- $twImg := "" -}}
+ {{- $images := slice -}}
 {{- if .Params.cover.image -}}
-  {{- $c := .Params.cover.image -}}
-  {{- if or (strings.HasPrefix $c "http://") (strings.HasPrefix $c "https://") (strings.HasPrefix $c "/") -}}
-    {{- $twImg = ($c | absURL) -}}
+  {{- if (ne .Params.cover.relative true) }}
+    {{- $images = $images | append (.Params.cover.image | absURL) -}}
   {{- else -}}
-    {{- with .Resources.GetMatch $c -}}
-      {{- $twImg = .Permalink -}}
-    {{- else -}}
-      {{- if or (strings.HasPrefix $c "images/") (strings.HasPrefix $c "./images/") -}}
-        {{- $twImg = (path.Join .RelPermalink $c) | absURL -}}
-      {{- else -}}
-        {{- $twImg = ($c | absURL) -}}
-      {{- end -}}
-    {{- end -}}
+    {{- $images = $images | append ((path.Join .RelPermalink .Params.cover.image) | absURL) -}}
   {{- end -}}
 {{- else -}}
-  {{- $images := partial "templates/_funcs/get-page-images" . -}}
-  {{- with index $images 0 -}}{{- $twImg = .Permalink -}}{{- end -}}
+  {{- with partial "_funcs/get-page-images" . -}}
+    {{- range . -}}
+      {{- $images = $images | append .Permalink -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 
-{{- if $twImg -}}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ $twImg }}">
+{{- if not $images -}}
+  {{- with site.Params.images -}}
+    {{- range . -}}
+      {{- $images = $images | append (. | absURL) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with index $images 0 -}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ . }}">
 {{- else -}}
-  <meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary">
 {{- end -}}
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}">
@@ -40,4 +42,3 @@
     {{- end }}
   {{- end }}
 {{- end }}
-

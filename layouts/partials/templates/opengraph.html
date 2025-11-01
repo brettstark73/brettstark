@@ -35,30 +35,32 @@
   <meta property="og:type" content="website">
 {{- end }}
 
-{{- $ogImg := "" -}}
+ {{- $images := slice -}}
 {{- if .Params.cover.image -}}
-  {{- $c := .Params.cover.image -}}
-  {{- if or (strings.HasPrefix $c "http://") (strings.HasPrefix $c "https://") (strings.HasPrefix $c "/") -}}
-    {{- $ogImg = ($c | absURL) -}}
+  {{- if (ne .Params.cover.relative true) }}
+    {{- $images = $images | append (.Params.cover.image | absURL) -}}
   {{- else -}}
-    {{- with .Resources.GetMatch $c -}}
-      {{- $ogImg = .Permalink -}}
-    {{- else -}}
-      {{- if or (strings.HasPrefix $c "images/") (strings.HasPrefix $c "./images/") -}}
-        {{- $ogImg = (path.Join .RelPermalink $c) | absURL -}}
-      {{- else -}}
-        {{- $ogImg = ($c | absURL) -}}
-      {{- end -}}
-    {{- end -}}
+    {{- $images = $images | append ((path.Join .RelPermalink .Params.cover.image) | absURL) -}}
   {{- end -}}
 {{- else -}}
-  {{- with partial "_funcs/get-page-images" . }}
-    {{- with index . 0 }}{{- $ogImg = .Permalink -}}{{- end -}}
+  {{- with partial "_funcs/get-page-images" . -}}
+    {{- range . -}}
+      {{- $images = $images | append .Permalink -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- with $ogImg }}
+
+{{- if not $images -}}
+  {{- with site.Params.images -}}
+    {{- range . -}}
+      {{- $images = $images | append (. | absURL) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range first 6 $images -}}
   <meta property="og:image" content="{{ . }}">
-{{- end }}
+{{- end -}}
 
 {{- with .Params.audio }}
   {{- range . | first 6  }}
@@ -95,4 +97,3 @@
 {{- with (.Param "social.fediverse_creator") }}
   <meta name="fediverse:creator" content="{{ . }}">
 {{- end }}
-

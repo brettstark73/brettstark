@@ -31,6 +31,8 @@ theme = 'hugo-papermod'
   Content = "Technology, Space, Travel, and Photography from an Aussie in Chicago"
 
 
+  images = ["/og-image.jpg"]
+
 [params.assets]
   favicon = "/favicon.ico"
   favicon16x16 = "/favicon-16x16.png"
