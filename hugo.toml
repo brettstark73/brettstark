@@ -55,6 +55,9 @@ theme = 'hugo-papermod'
     url = '/contact/'
     weight = 30
 
+[server]
+  watch = ["content", "layouts", "static", "assets", "data", "themes"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
