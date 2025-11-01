@@ -24,10 +24,12 @@ Currently serving as Director of Program Management in automotive electronics, l
 ### AI Second Act
 
 Helping mid-career professionals master AI strategy for operating executives.
+[www.aisecondact.com](https://www.aisecondact.com/)
 
 ### AI Builder Lab
 
 Teaching professionals rapid AI prototyping without traditional coding barriers.
+[www.aibuilderlab.com](https://www.aibuilderlab.com/)
 
 ## Personal Background
 
@@ -42,9 +44,10 @@ From Tom Price, raised in Adelaide Hills, now living in Libertyville, IL.
 
 ## Online Presence
 
-- **Main Blog**: brettstark.com
-- **AI Resources**: aisecondact.com, aibuilderlab.com
-- **Social**: LinkedIn, Twitter/X, Instagram
+- **Main Blog**: [brettstark.com](https://brettstark.com/)
+- **About Me (Extended)**: [about.brettstark.com](https://about.brettstark.com/)
+- **AI Resources**: [aisecondact.com](https://www.aisecondact.com/), [aibuilderlab.com](https://www.aibuilderlab.com/)
+- **Social**: [LinkedIn](https://linkedin.com/in/brettstark), [Twitter/X](https://twitter.com/brettstark), [Instagram](https://www.instagram.com/brettstark/)
 
 ## Contact
 

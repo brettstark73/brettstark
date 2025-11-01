@@ -50,10 +50,7 @@ theme = 'hugo-papermod'
     name = 'About'
     url = '/about/'
     weight = 20
-  [[menu.main]]
-    name = 'Contact'  
-    url = '/contact/'
-    weight = 30
+
 
 [server]
   watch = ["content", "layouts", "static", "assets", "data", "themes"]
