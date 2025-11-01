@@ -10,6 +10,7 @@ description: "Memories and experiences from Chicago"
 tags: [chicago]
 ---
 
+{{< photogrid >}}
 ![Chicago](images/E9B9BC52-5E87-4827-BD17-58F977445909_1_201_a.jpg)
 ![Chicago](images/6B1FE120-8EEA-4106-9F15-0EAB4F67226C.jpg)
 ![Chicago](images/P7300702.jpg)
@@ -28,3 +29,4 @@ tags: [chicago]
 ![Chicago](images/9CF756D4-1CB6-483B-AE77-CFB8BE8F29A1.jpg)
 ![Chicago](images/P7230676.jpg)
 ![Chicago](images/P7230655.jpg)
+{{< /photogrid >}}

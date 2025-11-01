@@ -9,6 +9,7 @@ description: "Memories and experiences from Singapore Late 2013"
 tags: [2021, photography]
 ---
 
+{{< photogrid >}}
 ![Singapore at Night](images/DSC01714.jpg)
 
 ![](images/24A2A073-6EA0-417C-9F8F-5A7C7D18D67C.jpg)
@@ -20,3 +21,4 @@ tags: [2021, photography]
 ![](images/DSC01670.jpg)
 
 ![](images/DSC01677.jpg)
+{{< /photogrid >}}

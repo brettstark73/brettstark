@@ -9,6 +9,7 @@ description: "Memories and experiences from Shanghai Early 2013"
 tags: [2020, photography]
 ---
 
+{{< photogrid >}}
 ![Shanghai Early 2013](images/IMG_0126.jpg)
 ![Shanghai Early 2013](images/IMG_0134-1.jpg)
 
@@ -17,3 +18,4 @@ tags: [2020, photography]
 
 ![Shanghai Early 2013](images/IMG_0153.jpg)
 ![Shanghai Early 2013](images/IMG_0151.jpg)
+{{< /photogrid >}}

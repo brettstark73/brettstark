@@ -10,6 +10,7 @@ description: "Memories and experiences from Rothenburg Germany 2011"
 tags: [germany]
 ---
 
+{{< photogrid >}}
 ![Rothenburg Germany](images/6D4EAED0-B2D1-4DD4-BA26-69BA78B6D040.jpg)
 
 ![Rothenburg Germany](images/2E067FB9-2890-499F-A136-F9470C112F72.jpg)
@@ -36,3 +37,4 @@ tags: [germany]
 ![Rothenburg Germany](images/P1000569.jpg)
 
 ![Rothenburg Germany](images/206E0D89-9EFF-4CD5-B462-8B340733BC04.jpg)
+{{< /photogrid >}}

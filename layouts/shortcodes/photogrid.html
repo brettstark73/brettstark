@@ -9,4 +9,14 @@
     height: auto;
   }
 </style>
-<div class="photo-grid">{{ .Inner | markdownify }}</div>
+<div class="photo-grid">
+{{ $inner := .Inner }}
+{{ $images := findRE `!\[.*?\]\((.*?)\)` $inner }}
+{{ range $images }}
+  {{ $imageUrl := index (findRE `\((.*?)\)` .) 0 | replaceRE `\(|\)` "" }}
+  {{ $image := $.Page.Resources.GetMatch (printf "%s" $imageUrl) }}
+  {{ if $image }}
+    <img src="{{ $image.RelPermalink }}" alt="{{ $image.Title }}">
+  {{ end }}
+{{ end }}
+</div>

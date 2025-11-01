@@ -13,6 +13,7 @@ Photo highlights from the first leg of the Australia trip in January 2022.
 
 ## Travel Highlights
 
+{{< photogrid >}}
 ![Australia travel scene](images/img_0049-scaled.jpg)
 
 The journey begins with scenic views and travel preparations.
@@ -28,6 +29,7 @@ The journey begins with scenic views and travel preparations.
 ![Australian adventure](images/5631677392.jpg)
 
 ![Trip highlights](images/5639805504.jpg)
+{{< /photogrid >}}
 
 ---
 

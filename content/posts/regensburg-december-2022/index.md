@@ -11,6 +11,7 @@ cover:
 
 A visual journey through the beautiful medieval city of Regensburg, Germany in December 2022.
 
+{{< photogrid >}}
 ## Regensburg Cathedral
 
 ![Regensburg Cathedral](images/3CDB576F-773D-464A-B100-26371D5D822F.jpg)
@@ -72,6 +73,7 @@ The magnificent Regensburg Cathedral (St. Peter's Cathedral) dominates the city 
 ![Street perspective](images/9C1D3D8A-4661-4533-B7C4-CC0A5033E8DA.jpg)
 
 ![Building facade](images/F3EE5F54-6F52-4CD1-8082-992A8AD9932B.jpg)
+{{< /photogrid >}}
 
 ---
 

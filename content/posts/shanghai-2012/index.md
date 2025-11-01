@@ -9,6 +9,7 @@ description: "Memories and experiences from Shanghai 2012"
 tags: [2020, photography]
 ---
 
+{{< photogrid >}}
 ![Shanghai 2012](images/IMG_2740.jpg)
 
 ![Shanghai 2012](images/P1020463.jpg)
@@ -44,3 +45,4 @@ tags: [2020, photography]
 ![Shanghai 2012](images/146A9167-97E5-4B0B-A9BA-224A27308312.jpg)
 ![Shanghai 2012](images/P1020450.jpg)
 ![Shanghai 2012](images/390F8157-228A-4208-9AE2-E7EC276482B0_1_201_a.jpg)
+{{< /photogrid >}}

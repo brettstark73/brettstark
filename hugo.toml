@@ -13,6 +13,7 @@ theme = 'hugo-papermod'
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
+  ShareButtons = ["x", "linkedin", "facebook", "instagram"]
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowWordCount = true
@@ -31,14 +32,14 @@ theme = 'hugo-papermod'
   Content = "Technology, Space, Travel, and Photography from an Aussie in Chicago"
 
 
-  images = ["/og-image.jpg"]
+  images = ["/brand/profile-picture.jpg"]
 
 [params.assets]
-  favicon = "/favicon.ico"
-  favicon16x16 = "/favicon-16x16.png"
-  favicon32x32 = "/favicon-32x32.png"
-  apple_touch_icon = "/apple-touch-icon.png"
-  safari_pinned_tab = "/safari-pinned-tab.svg"
+  favicon = "/brand/profile-picture.jpg"
+  favicon16x16 = "/brand/profile-picture.jpg"
+  favicon32x32 = "/brand/profile-picture.jpg"
+  apple_touch_icon = "/brand/profile-picture.jpg"
+  safari_pinned_tab = "/brand/profile-picture.jpg"
   
 [menu]
   [[menu.main]]

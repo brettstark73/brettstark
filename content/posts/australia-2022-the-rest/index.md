@@ -11,6 +11,7 @@ cover:
 
 Continuing the Australia 2022 journey - more adventures, sights, and memories from the land down under.
 
+{{< photogrid >}}
 ## Landscapes and Views
 
 ![Scenic Australian landscape](images/5A1A890C-6F73-473F-817F-551C200769C6.jpg)
@@ -74,6 +75,7 @@ Continuing the Australia 2022 journey - more adventures, sights, and memories fr
 ![Final adventures](images/IMG_0623.jpg)
 
 ![Journey's end](images/IMG_0637.jpg)
+{{< /photogrid >}}
 
 ---
 

@@ -13,6 +13,7 @@ Autumn colors and family moments captured in October 2020.
 
 ## Early October
 
+{{< photogrid >}}
 ![Beautiful autumn scene](images/PA100161-scaled.jpeg)
 
 The season begins with vibrant fall colors and changing leaves.
@@ -42,6 +43,7 @@ The season begins with vibrant fall colors and changing leaves.
 ![Autumn finale](images/PA240008-scaled.jpeg)
 
 ![Fall season ending](images/PA240013-scaled.jpeg)
+{{< /photogrid >}}
 
 ---
 
