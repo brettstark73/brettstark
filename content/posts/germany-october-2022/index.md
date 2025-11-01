@@ -7,6 +7,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_1774.jpg"
+description: "Memories and experiences from Germany October 2022"
+tags: [germany]
 ---
 
 {{< photogrid >}}

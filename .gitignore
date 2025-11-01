@@ -5,6 +5,8 @@ server.log
 .DS_Store
 lighthouse-report.json
 node_modules
+*.backup
+*.tags-backup
 
 # Lighthouse CI artifacts
 .lighthouseci/

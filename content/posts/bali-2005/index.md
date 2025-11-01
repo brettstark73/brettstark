@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/EB96BE57-9A79-4378-8DA0-B994718037D9-1.jpg"
+description: "Memories and experiences from Bali 2005"
+tags: [bali, indonesia, 2020, photography]
 ---
 
 {{< photogrid >}}

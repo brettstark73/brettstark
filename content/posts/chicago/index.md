@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/P7310738.jpg"
+description: "Memories and experiences from Chicago"
+tags: [chicago]
 ---
 
 ![Chicago](images/E9B9BC52-5E87-4827-BD17-58F977445909_1_201_a.jpg)

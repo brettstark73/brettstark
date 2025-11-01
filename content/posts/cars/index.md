@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/P6240028.jpg"
+description: "Memories and experiences from Cars"
+tags: [photography]
 ---
 
 Regensburg. 2018. Plus some food & drink.

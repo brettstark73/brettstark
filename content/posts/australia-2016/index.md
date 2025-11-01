@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/89FACBB4-507C-4918-B041-DC7D38FA7CA6_1_201_a.jpg"
+description: "Memories and experiences from Australia 2016"
+tags: [australia]
 ---
 
 - ![Australia 2016](images/89FACBB4-507C-4918-B041-DC7D38FA7CA6_1_201_a.jpg)

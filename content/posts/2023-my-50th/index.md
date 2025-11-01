@@ -6,6 +6,8 @@ categories:
   - "life"
 cover:
   image: "images/IMG_3601-1-scaled.jpg"
+description: "Memories and experiences from 2023 - My 50th"
+tags: [2023, birthday, milestone, 50th, photography]
 ---
 
 Did some fun things for my 50th -

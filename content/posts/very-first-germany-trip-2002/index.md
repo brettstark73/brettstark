@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/24810AED-B2F4-4A3F-8BD7-258D09C48F30.jpg"
+description: "Memories and experiences from Very First Germany Trip 2002"
+tags: [germany]
 ---
 
 ![Small German Pub](images/24810AED-B2F4-4A3F-8BD7-258D09C48F30.jpg)

@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/P1020606.jpg"
+description: "Memories and experiences from Beijing 2012"
+tags: [beijing, china, 2020, photography]
 ---
 
 - ![Beijing 2012](images/IMG_2977-1024x768.jpg)

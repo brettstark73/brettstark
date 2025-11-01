@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/93038F6A-B68C-4218-BAAE-639414F98DD2.jpg"
+description: "Memories and experiences from Regensburg Christmas"
+tags: [germany, christmas]
 ---
 
 Hadd been a long time since I was in Germany around Christmas time.

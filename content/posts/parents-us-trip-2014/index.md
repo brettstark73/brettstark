@@ -5,6 +5,8 @@ categories:
   - "family"
 cover:
   image: "images/IMG_2245.jpg"
+description: "Memories and experiences from Parents US Trip 2014"
+tags: [2021, photography]
 ---
 
 {{< photogrid >}}

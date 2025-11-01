@@ -7,6 +7,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_3445-scaled.jpg"
+description: "Memories and experiences from Family Adelaide Trip 2008"
+tags: [2020, photography]
 ---
 
 {{< photogrid >}}

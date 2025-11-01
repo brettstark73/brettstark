@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_1617-EFFECTS.jpg"
+description: "Memories and experiences from Stockholm!"
+tags: [photography]
 ---
 
 1 and so far, only trip here. Mid 2017.

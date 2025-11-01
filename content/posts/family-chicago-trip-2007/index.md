@@ -6,6 +6,8 @@ categories:
   - "family"
 cover:
   image: "images/IMG_0228-scaled.jpg"
+description: "Memories and experiences from Family Chicago Trip 2007"
+tags: [chicago]
 ---
 
 {{< photogrid >}}

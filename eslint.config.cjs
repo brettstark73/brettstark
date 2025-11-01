@@ -14,7 +14,7 @@ module.exports = [
       '**/static/**',
       '**/resources/**',
       '**/.lighthouseci/**',
-      '**/*.html'
+      '**/*.html',
     ],
   },
   js.configs.recommended,

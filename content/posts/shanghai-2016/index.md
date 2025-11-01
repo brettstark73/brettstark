@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_1836.jpg"
+description: "Memories and experiences from Shanghai 2016"
+tags: [2021, photography]
 ---
 
 {{< photogrid >}}

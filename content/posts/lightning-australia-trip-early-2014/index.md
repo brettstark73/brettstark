@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_0173.jpg"
+description: "Memories and experiences from Lightning Australia Trip Early 2014"
+tags: [australia]
 ---
 
 Quick trip home from a work trip in Singapore. Great to see Pas.

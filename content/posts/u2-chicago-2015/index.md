@@ -5,6 +5,8 @@ categories:
   - "chicago"
 cover:
   image: "images/IMG_0476.jpg"
+description: "Memories and experiences from U2 @ Chicago 2015"
+tags: [chicago]
 ---
 
 - ![](images/IMG_0476.jpg)

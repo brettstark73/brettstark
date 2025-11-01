@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/B4815899-847E-4D96-8799-F82FA5EAC54F.jpg"
+description: "Memories and experiences from Minocqua Wisconsin"
+tags: [photography]
 ---
 
 {{< photogrid >}}

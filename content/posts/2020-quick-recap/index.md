@@ -3,6 +3,8 @@ title: "2020 - Quick Recap"
 date: 2023-01-02
 categories:
   - "life"
+description: "Memories and experiences from 2020 - Quick Recap"
+tags: [2023, year-review, reflection]
 ---
 
 Disaster. Pandemic.  

@@ -6,6 +6,8 @@ categories:
   - "home"
 cover:
   image: "images/DF10F7D6-2B65-49EC-8A10-C331F932DDF2.jpg"
+description: "Memories and experiences from 2020 - Year of Pandemic"
+tags: [2021, pandemic, covid-19, photography]
 ---
 
 Year pretty much sucked. Highlights - ''escape'' from Germany, running, backyard movies, vege garden, camping and trump losing the election.

@@ -5,6 +5,8 @@ categories:
   - "life"
 cover:
   image: "images/25338374346_13b2c5b505_b.jpg"
+description: "Memories and experiences from Year in Review - 2024"
+tags: [2025, year-review, reflection, photography]
 ---
 
 ## 2024 Theme

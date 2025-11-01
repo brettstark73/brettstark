@@ -3,6 +3,8 @@ title: "2022 - Quick Recap"
 date: 2023-01-02
 categories:
   - "life"
+description: "Memories and experiences from 2022 - Quick Recap"
+tags: [2023, year-review, reflection]
 ---
 
 2022 was better than 2020/2021 but also with some difficulties.  

@@ -6,6 +6,8 @@ categories:
   - "home"
 cover:
   image: "images/C3FC0EE5-BF5D-4F73-8A9D-5BD407B02AA6.jpg"
+description: "Memories and experiences from Autumn 2017"
+tags: [autumn, fall]
 ---
 
 ![](images/C3FC0EE5-BF5D-4F73-8A9D-5BD407B02AA6.jpg)

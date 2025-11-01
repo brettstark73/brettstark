@@ -7,6 +7,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_0275-1-scaled.jpg"
+description: "Memories and experiences from Australia 2022 - First Two Weeks"
+tags: [australia]
 ---
 
 ## Highlights

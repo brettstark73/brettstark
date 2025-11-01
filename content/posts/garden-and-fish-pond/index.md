@@ -5,6 +5,8 @@ categories:
   - "chicago"
 cover:
   image: "images/IMG_2061.jpg"
+description: "Memories and experiences from Garden and Fish Pond 2014"
+tags: [2021, photography]
 ---
 
 {{< photogrid >}}

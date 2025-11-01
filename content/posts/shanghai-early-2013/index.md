@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_0153.jpg"
+description: "Memories and experiences from Shanghai Early 2013"
+tags: [2020, photography]
 ---
 
 ![Shanghai Early 2013](images/IMG_0126.jpg)

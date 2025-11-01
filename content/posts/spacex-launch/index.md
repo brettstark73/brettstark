@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_1350.jpg"
+description: "Memories and experiences from SpaceX Launch"
+tags: [photography]
 ---
 
 Work trip for partnership that didn't work out. Anyway though, got to go VIP to a launch!

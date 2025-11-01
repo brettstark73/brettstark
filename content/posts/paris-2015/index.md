@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_1013.jpg"
+description: "Memories and experiences from Paris 2015"
+tags: [paris, france, 2021, photography]
 ---
 
 - ![Paris 2015](images/IMG_1016-1024x768.jpg)

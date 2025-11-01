@@ -5,6 +5,8 @@ categories:
   - "family"
 cover:
   image: "images/IMG_1263.jpg"
+description: "Memories and experiences from Welcome Canyon Stark - March 2017"
+tags: [2021, photography]
 ---
 
 ![Canyon Stark](images/IMG_1263.jpg)

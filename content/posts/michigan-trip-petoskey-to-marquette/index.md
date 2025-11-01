@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_1189.jpg"
+description: "Memories and experiences from Michigan Trip - Petoskey to Marquette"
+tags: [michigan, photography]
 ---
 
 {{< photogrid >}}

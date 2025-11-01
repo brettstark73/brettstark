@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/D068A71C-D07E-4CF1-99F8-238B6AD1EBC3_1_201_a-e1612921774742.jpg"
+description: "Memories and experiences from Disney Bound Road Trip 2013"
+tags: [2021, disney, theme-park, photography]
 ---
 
 {{< photogrid >}}

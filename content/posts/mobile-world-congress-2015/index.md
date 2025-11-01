@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_2915.jpg"
+description: "Memories and experiences from Mobile World Congress 2015"
+tags: [2021, photography]
 ---
 
 {{< photogrid >}}

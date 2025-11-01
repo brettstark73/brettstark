@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/0A58D979-B254-46C4-980D-3891F51D74B5.jpg"
+description: "Memories and experiences from Regensburg Later 2019"
+tags: [germany]
 ---
 
 ![Regensburg Later 2019](images/0A58D979-B254-46C4-980D-3891F51D74B5.jpg)

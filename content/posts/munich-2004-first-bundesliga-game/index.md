@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/0FC10C7E-2282-4ACF-8A77-21FB7C9A2874.jpg"
+description: "Memories and experiences from Munich 2004 - First Bundesliga Game"
+tags: [2020, photography]
 ---
 
 {{< photogrid >}}

@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/07739228-7D25-4FBE-8B9A-A11EDB1F25B2.jpg"
+description: "Memories and experiences from Sindelfingen 2019"
+tags: [2021, photography]
 ---
 
 ![Sindelfingen 2019](images/07739228-7D25-4FBE-8B9A-A11EDB1F25B2.jpg)

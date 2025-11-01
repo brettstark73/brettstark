@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_0936.jpg"
+description: "Memories and experiences from Regensburg June 202"
+tags: [germany]
 ---
 
 {{< photogrid >}}

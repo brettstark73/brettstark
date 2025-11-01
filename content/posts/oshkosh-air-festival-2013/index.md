@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_0749.jpg"
+description: "Memories and experiences from Oshkosh Air Festival 2013"
+tags: [2021, photography]
 ---
 
 - ![Oshkosh Air Festival](images/IMG_0749-1024x768.jpg)

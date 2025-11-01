@@ -7,6 +7,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_2352.jpg"
+description: "Memories and experiences from Australia Trip 2012"
+tags: [australia]
 ---
 
 {{< photogrid >}}

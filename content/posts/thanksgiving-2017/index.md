@@ -6,6 +6,8 @@ categories:
   - "family"
 cover:
   image: "images/B49BA34D-7E83-4FCF-868A-65D43CC07E82.jpg"
+description: "Memories and experiences from Thanksgiving 2017"
+tags: [2021, photography]
 ---
 
 In Chicago.

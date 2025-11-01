@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/T22853.jpg"
+description: "Memories and experiences from Regensburg (Again)"
+tags: [germany]
 ---
 
 Later 2017.

@@ -5,6 +5,8 @@ categories:
   - "life"
 cover:
   image: "images/IMG_0911.jpg"
+description: "Memories and experiences from Happiness at Work"
+tags: [memories]
 ---
 
 Very interesting article.

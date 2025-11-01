@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/P9240362.jpg"
+description: "Memories and experiences from Berlin 2015"
+tags: [germany, 2021, photography]
 ---
 
 - !![Berlin 2015](images/P9240362-1024x768.jpg)

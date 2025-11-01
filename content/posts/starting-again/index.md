@@ -5,6 +5,8 @@ categories:
   - "general"
 cover:
   image: "images/IMG_5975-scaled.jpg"
+description: "Memories and experiences from Starting Again"
+tags: [photography]
 ---
 
 New decade. New pandemic. Time to start this site again with some random phots from my instagram feed.

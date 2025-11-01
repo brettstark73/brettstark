@@ -5,6 +5,8 @@ categories:
   - "chicago"
 cover:
   image: "images/DSC01309.jpg"
+description: "Memories and experiences from Lincoln Park Zoo Lights"
+tags: [photography]
 ---
 
 Late 2014

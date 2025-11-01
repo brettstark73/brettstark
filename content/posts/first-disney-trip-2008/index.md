@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_0831-scaled.jpg"
+description: "Memories and experiences from First Disney Trip - 2008"
+tags: [2020, disney, theme-park, photography]
 ---
 
 ![](images/IMG_0831-scaled.jpg)

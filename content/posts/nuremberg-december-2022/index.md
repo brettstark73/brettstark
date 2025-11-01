@@ -7,6 +7,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_2123.jpg"
+description: "Memories and experiences from Nuremberg December 2022"
+tags: [germany]
 ---
 
 {{< photogrid >}}

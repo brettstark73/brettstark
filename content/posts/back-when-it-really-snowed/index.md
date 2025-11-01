@@ -5,6 +5,8 @@ categories:
   - "chicago"
 cover:
   image: "images/IMG_0039-scaled.jpg"
+description: "Memories and experiences from Back When It Really Snowed"
+tags: [snow, winter, photography]
 ---
 
 Early 2013

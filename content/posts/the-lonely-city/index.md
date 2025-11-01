@@ -3,6 +3,8 @@ title: "The Lonely City"
 date: 2023-12-26
 categories:
   - "life"
+description: "Memories and experiences from The Lonely City"
+tags: [memories]
 ---
 
 <figure>

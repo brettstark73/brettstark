@@ -5,6 +5,8 @@ categories:
   - "life"
 cover:
   image: "images/pexels-photo-1118872.jpeg"
+description: "Memories and experiences from Year in Review - 2023"
+tags: [2024, year-review, reflection, photography]
 ---
 
 An image of storm clouds seems appropriate. 2023 is a year that quite a few members of our families would like to forget.

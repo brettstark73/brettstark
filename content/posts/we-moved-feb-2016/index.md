@@ -6,6 +6,8 @@ categories:
   - "home"
 cover:
   image: "images/D9EF22C5-98F9-4113-B244-7BE9788F3213.jpg"
+description: "Memories and experiences from We Moved - Feb 2016"
+tags: [2021, photography]
 ---
 
 {{< photogrid >}}

@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_0046.jpg"
+description: "Memories and experiences from Singapore Work Trip Early 2014"
+tags: [2021, photography]
 ---
 
 Singapore botanic garden was a highlight.

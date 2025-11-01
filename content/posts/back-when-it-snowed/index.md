@@ -5,6 +5,8 @@ categories:
   - "chicago"
 cover:
   image: "images/73CB38A3-D8F9-43BA-9FA3-DB9C2DFF8F9A_1_201_a.jpg"
+description: "Memories and experiences from Back When it Snowed"
+tags: [snow, winter, photography]
 ---
 
 ![](images/73CB38A3-D8F9-43BA-9FA3-DB9C2DFF8F9A_1_201_a.jpg)

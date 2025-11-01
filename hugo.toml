@@ -56,3 +56,15 @@ theme = 'hugo-papermod'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# Image processing configuration
+[imaging]
+  # Default JPEG quality (0-100, higher is better quality but larger file size)
+  quality = 82
+  # Resample filter used for resizing (Box, NearestNeighbor, Linear, Gaussian, Lanczos)
+  resampleFilter = "Lanczos"
+  # Anchor position for cropping (Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight)
+  anchor = "Smart"
+
+  # Background color for transparent images when converting to JPEG
+  bgColor = "#ffffff"

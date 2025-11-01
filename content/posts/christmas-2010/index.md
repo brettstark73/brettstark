@@ -5,6 +5,8 @@ categories:
   - "family"
 cover:
   image: "images/90222F52-D5AB-46B5-AA63-A64D443C6A94-1.jpg"
+description: "Memories and experiences from Christmas 2010"
+tags: [christmas]
 ---
 
 - ![Christmas Tree 2010](images/P1000137-1-1024x768.jpg)

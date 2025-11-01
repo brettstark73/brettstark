@@ -5,6 +5,8 @@ categories:
   - "technology"
 cover:
   image: "images/pexels-photo-450035.jpeg"
+description: "Memories and experiences from Building a PC"
+tags: [technology, diy, photography]
 ---
 
 So, it's been ages since doing a PC build. Perhaps back in the early 2000s, in fact, I think it was 2001 or so I last did this. I actually need a pretty large overhaul of computers in the house. I have:

@@ -5,6 +5,8 @@ categories:
   - "family"
 cover:
   image: "images/IMG_0024-EFFECTS.jpg"
+description: "Memories and experiences from Briscoe (the Horse) - An Awesome Life"
+tags: [pets, animals, photography]
 ---
 
 Sadly, Briscoe passed away in the first half of 2021 after a long and awesome 16 and a half years. We'll miss you Briscoe.

@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/13A4C409-F666-4783-A6DF-64F35A00801E-scaled.jpg"
+description: "Memories and experiences from Stuttgart & Sindelfingen 2010"
+tags: [2020, photography]
 ---
 
 {{< photogrid >}}

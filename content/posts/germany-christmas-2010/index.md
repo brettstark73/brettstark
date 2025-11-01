@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/P1000030-1-scaled.jpg"
+description: "Memories and experiences from Germany Christmas 2010"
+tags: [germany, christmas]
 ---
 
 - ![Sindelfingen Germany Christmas 2010](images/P1000030-1-scaled.jpg)

@@ -5,6 +5,8 @@ categories:
   - "home"
 cover:
   image: "images/IMG_3515.jpg"
+description: "Memories and experiences from Home 2018"
+tags: [2021, photography]
 ---
 
 {{< photogrid >}}

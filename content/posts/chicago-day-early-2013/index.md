@@ -5,6 +5,8 @@ categories:
   - "chicago"
 cover:
   image: "images/P1030391.jpg"
+description: "Memories and experiences from Chicago Day Early 2013"
+tags: [chicago]
 ---
 
 {{< photogrid >}}

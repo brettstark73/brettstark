@@ -7,6 +7,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_6568.jpg"
+description: "Memories and experiences from 2024 - Highlights in Pictures"
+tags: [2025, photography]
 ---
 
 A collection of photo highlights from 2024.

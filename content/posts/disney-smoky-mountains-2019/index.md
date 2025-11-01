@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/DSC03326.jpg"
+description: "Memories and experiences from Disney & Smoky Mountains 2019"
+tags: [2021, disney, theme-park, photography]
 ---
 
 - ![Disney 2019](images/A0BB89EA-4B4A-4A23-A894-BAB8249AD6FF-1024x682.jpg)

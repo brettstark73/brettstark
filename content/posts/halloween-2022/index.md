@@ -5,6 +5,8 @@ categories:
   - "home"
 cover:
   image: "images/IMG_1815.jpg"
+description: "Memories and experiences from Halloween 2022"
+tags: [halloween]
 ---
 
 ![](images/IMG_1845-1024x1024.jpg)

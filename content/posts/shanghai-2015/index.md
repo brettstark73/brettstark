@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/P4150205.jpg"
+description: "Memories and experiences from Shanghai 2015"
+tags: [2021, photography]
 ---
 
 - ![Shanghai 2015](images/P4150205.jpg)

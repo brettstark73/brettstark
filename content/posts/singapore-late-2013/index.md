@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/DSC01714.jpg"
+description: "Memories and experiences from Singapore Late 2013"
+tags: [2021, photography]
 ---
 
 ![Singapore at Night](images/DSC01714.jpg)

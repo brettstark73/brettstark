@@ -6,6 +6,8 @@ categories:
   - "home"
 cover:
   image: "images/DSC01057-e1612920941261.jpg"
+description: "Memories and experiences from Semi Random Photos Around Libertyville"
+tags: [photography]
 ---
 
 - ![Casey and Briscoe](images/DSC00975.jpg)

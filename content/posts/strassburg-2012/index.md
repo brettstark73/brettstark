@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/486E0BC4-7A7B-4CC6-849E-12014263D5ED.jpg"
+description: "Memories and experiences from Strassburg 2012"
+tags: [2020, photography]
 ---
 
 - ![Strassburg 2012](images/P1000954-1024x768.jpg)

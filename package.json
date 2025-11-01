@@ -17,7 +17,11 @@
     "security:secrets": "node -e \"const fs=require('fs');const content=fs.readFileSync('package.json','utf8');if(/[\\\"\\'][a-zA-Z0-9+/]{20,}[\\\"\\']/.test(content)){console.error('❌ Potential hardcoded secrets in package.json');process.exit(1)}else{console.log('✅ No secrets detected in package.json')}\"",
     "lighthouse:ci": "lhci autorun",
     "lighthouse:upload": "lhci upload",
-    "lint:fix": "eslint . --ext .js,.jsx,.mjs,.cjs --fix && stylelint \"assets/**/*.{css,scss,sass,less,pcss}\" --fix --allow-empty-input"
+    "lint:fix": "eslint . --ext .js,.jsx,.mjs,.cjs --fix && stylelint \"assets/**/*.{css,scss,sass,less,pcss}\" --fix --allow-empty-input",
+    "images:optimize": "bash scripts/optimize-images.sh",
+    "images:optimize:post": "bash scripts/optimize-images.sh",
+    "seo:fix": "bash scripts/bulk-seo-fix.sh",
+    "tags:enhance": "bash scripts/enhance-tags.sh"
   },
   "keywords": [
     "quality",

@@ -5,6 +5,8 @@ categories:
   - "family"
 cover:
   image: "images/IMG_3367-scaled.jpg"
+description: "Memories and experiences from Mum"
+tags: [memories]
 ---
 
 Miss you already Mum.

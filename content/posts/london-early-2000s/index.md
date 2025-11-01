@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/My-Pictures0001.jpg"
+description: "Memories and experiences from London - Early 200s"
+tags: [london, uk]
 ---
 
 {{< photogrid >}}

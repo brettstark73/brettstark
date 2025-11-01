@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_3967.jpg"
+description: "Memories and experiences from Mobile World Congress 2019"
+tags: [2021, photography]
 ---
 
 - ![Sitges 2019](images/IMG_3973-1024x768.jpg)

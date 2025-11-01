@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/8DDD1D62-60C8-44E1-8F38-3399CFD12688_1_201_a.jpg"
+description: "Memories and experiences from Traverse City 2016"
+tags: [2021, photography]
 ---
 
 {{< photogrid >}}

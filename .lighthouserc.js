@@ -30,7 +30,7 @@ module.exports = {
         'html-has-lang': 'error',
         'image-alt': 'error',
         // SEO essentials
-        'canonical': 'warn',
+        canonical: 'warn',
         'meta-viewport': 'error',
         'structured-data': 'warn',
       },

@@ -6,6 +6,8 @@ categories:
   - "life"
 cover:
   image: "images/IMG_7026-scaled.jpg"
+description: "Memories and experiences from Mum Gathering, July 16 2023"
+tags: [2023, photography]
 ---
 
 Here is the speech I gave for Mum.

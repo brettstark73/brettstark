@@ -5,6 +5,8 @@ categories:
   - "chicago"
 cover:
   image: "images/IMG_0745.jpg"
+description: "Memories and experiences from Cubs Win!!"
+tags: [photography]
 ---
 
 {{< photogrid >}}

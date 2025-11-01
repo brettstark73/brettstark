@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/3D8800E7-BFE8-41AF-85E4-5CD06DF8D8F6.jpg"
+description: "Memories and experiences from Japan"
+tags: [photography]
 ---
 
 {{< photogrid >}}

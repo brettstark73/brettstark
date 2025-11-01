@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_3332.jpg"
+description: "Memories and experiences from Galena 2012"
+tags: [2020, photography]
 ---
 
 - ![](images/IMG_3334-1024x768.jpg)

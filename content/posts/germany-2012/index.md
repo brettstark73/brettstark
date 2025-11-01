@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_3163-2.jpg"
+description: "Memories and experiences from Germany 2012"
+tags: [germany]
 ---
 
 {{< photogrid >}}

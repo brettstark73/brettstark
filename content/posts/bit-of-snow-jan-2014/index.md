@@ -5,6 +5,8 @@ categories:
   - "home"
 cover:
   image: "images/DSC02176-e1612920844743.jpg"
+description: "Memories and experiences from Bit of Snow January 2014"
+tags: [2021, snow, winter, photography]
 ---
 
 ![](images/DSC02217.jpg)

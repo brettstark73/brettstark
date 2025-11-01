@@ -5,6 +5,8 @@ categories:
   - "life"
 cover:
   image: "images/IMG_2174.jpg"
+description: "Memories and experiences from 1990 - Graduated High School"
+tags: [2023, graduation, milestone, photography]
 ---
 
 Hated high school with a passion. Particularly years 8 to 10.

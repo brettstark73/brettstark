@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_2740.jpg"
+description: "Memories and experiences from Shanghai 2012"
+tags: [2020, photography]
 ---
 
 ![Shanghai 2012](images/IMG_2740.jpg)

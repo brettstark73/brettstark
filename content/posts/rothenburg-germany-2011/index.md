@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/6D4EAED0-B2D1-4DD4-BA26-69BA78B6D040.jpg"
+description: "Memories and experiences from Rothenburg Germany 2011"
+tags: [germany]
 ---
 
 ![Rothenburg Germany](images/6D4EAED0-B2D1-4DD4-BA26-69BA78B6D040.jpg)

@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_1760.jpg"
+description: "Memories and experiences from We Went Camping"
+tags: [camping, outdoors, photography]
 ---
 
 Mid 2017

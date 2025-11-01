@@ -7,6 +7,8 @@ categories:
   - "home"
 cover:
   image: "images/P1000376.jpg"
+description: "Memories and experiences from A Bit of Snow Early 2011"
+tags: [2020, snow, winter, photography]
 ---
 
 ![Big Snow Early 2011](images/P1000359.jpg)

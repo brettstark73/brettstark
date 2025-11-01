@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/IMG_1510.jpg"
+description: "Memories and experiences from Regensburg Germany Early 2011"
+tags: [germany]
 ---
 
 - ![Alte Linde](images/P1000528-1024x576.jpg)

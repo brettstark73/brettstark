@@ -9,6 +9,7 @@ tags:
   - "travel"
 cover:
   image: "images/CEC8339B-918B-463D-99B6-A1408434BE91.jpg"
+description: "Memories and experiences from Camping 2012"
 ---
 
 - ![](images/CEC8339B-918B-463D-99B6-A1408434BE91-1024x1024.jpg)

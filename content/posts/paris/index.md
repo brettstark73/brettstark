@@ -6,6 +6,8 @@ categories:
   - "travel"
 cover:
   image: "images/P7150205.jpg"
+description: "Memories and experiences from Paris"
+tags: [paris, france]
 ---
 
 2018. Work trip. Was a 'quiet' weekend in Paris, with 'only' a World Cup final happening plus it happened to be Bastille Day.

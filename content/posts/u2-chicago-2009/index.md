@@ -5,6 +5,8 @@ categories:
   - "chicago"
 cover:
   image: "images/83B8C3A6-B1B1-4A63-9D77-C0630406353A-scaled.jpg"
+description: "Memories and experiences from U2 Chicago 2009"
+tags: [chicago]
 ---
 
 ![](images/83B8C3A6-B1B1-4A63-9D77-C0630406353A-scaled.jpg)

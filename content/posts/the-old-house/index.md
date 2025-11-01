@@ -5,6 +5,8 @@ categories:
   - "home"
 cover:
   image: "images/IMG_0922.jpg"
+description: "Memories and experiences from The Old House"
+tags: [photography]
 ---
 
 ![](images/IMG_0111.jpg)

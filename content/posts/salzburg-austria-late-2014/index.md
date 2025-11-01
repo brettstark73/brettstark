@@ -5,6 +5,8 @@ categories:
   - "travel"
 cover:
   image: "images/DSC01055.jpg"
+description: "Memories and experiences from Salzburg, Austria Late 2014"
+tags: [2021, photography]
 ---
 
 - ![Salzburg](images/DSC01055-1024x682.jpg)

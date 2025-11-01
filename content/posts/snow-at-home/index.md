@@ -5,6 +5,8 @@ categories:
   - "home"
 cover:
   image: "images/71E2A2F1-581D-4ECD-88D1-F8D915D07B9D_4.jpg"
+description: "Memories and experiences from Snow at Home"
+tags: [snow, winter, photography]
 ---
 
 ![Snow 2019](images/71E2A2F1-581D-4ECD-88D1-F8D915D07B9D_4.jpg)

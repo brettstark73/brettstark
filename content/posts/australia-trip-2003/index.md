@@ -5,6 +5,8 @@ categories:
   - "australia"
 cover:
   image: "images/38D3D33A-D8E5-4D68-9E5A-6D176F565D7D.jpg"
+description: "Memories and experiences from Australia Trip 2003"
+tags: [australia]
 ---
 
 ![](images/38D3D33A-D8E5-4D68-9E5A-6D176F565D7D.jpg)
