@@ -28,7 +28,12 @@
     "tags:enhance": "bash scripts/enhance-tags.sh",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "validate:pre-push": "npm run test:patterns --if-present && npm run lint && npm run format:check && npm run test:commands --if-present && npm test --if-present"
+    "validate:pre-push": "npm run test:patterns --if-present && npm run lint && npm run format:check && npm run test:commands --if-present && npm test --if-present",
+    "type-check": "tsc --noEmit",
+    "type-check:tests": "tsc --noEmit --project tests/tsconfig.json",
+    "type-check:all": "npm run type-check && npm run type-check:tests",
+    "quality:check": "npm run type-check:all && npm run lint && npm run test",
+    "quality:ci": "npm run quality:check && npm run security:audit"
   },
   "keywords": [
     "personal-website",
@@ -80,6 +85,10 @@
       "prettier --write"
     ],
     "themes/**/*.{css,scss,sass,less,pcss}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "**/*.{css,scss,sass,less,pcss}": [
       "stylelint --fix",
       "prettier --write"
     ]
