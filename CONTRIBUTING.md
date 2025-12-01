@@ -20,7 +20,7 @@ Thanks for helping improve this site. A few guidelines keep things consistent an
 
 - `npm run format` — format via Prettier.
 - `npm run format:check` — CI-friendly format check.
-- If configured: `npm run lint:scripts`, `npm run lint:styles` (commands skip gracefully if no matching files exist).
+- `npm run lint` — ESLint + Stylelint check.
 
 ## Development & Build
 

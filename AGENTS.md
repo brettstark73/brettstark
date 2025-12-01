@@ -22,7 +22,7 @@ Prettier enforces 2-space indentation, single quotes, and 80-character wraps—r
 
 ## Testing & Quality Checks
 
-Run `npm run format:check`, `npm run lint:scripts`, and `npm run lint:styles` locally; each command skips gracefully when no matching files exist. GitHub Actions mirrors this via `.github/workflows/quality.yml` using Node 20 and Hugo 0.150.0. Add functional or visual regression tests alongside features as the site evolves.
+Run `npm run format:check` and `npm run lint` locally to check formatting and linting before commits. GitHub Actions mirrors this via `.github/workflows/quality.yml` using Node 20 and Hugo 0.150.0. Add functional or visual regression tests alongside features as the site evolves.
 
 ## Commit & Pull Request Guidelines
 
@@ -32,9 +32,9 @@ Follow `Type: summary` commit subjects (e.g., `Content: import 2020 recap`, `Fix
 
 Install `git-lfs` locally; Husky hooks enforce this on `post-merge` and `pre-push`. Vercel deploys via `vercel.json`; update DNS for `brettstark.com` and keep `HUGO_VERSION` aligned. Secrets (API keys, third-party tokens) belong in Vercel or GitHub Action secrets—never in `hugo.toml` or content front matter.
 
-## Quality Automation (create-quality-automation)
+## Quality Automation (create-qa-architect)
 
-**IMPORTANT**: This project uses `create-quality-automation` for CI/CD quality gates. Before suggesting or creating ANY new GitHub Actions workflows for lint/test/security/formatting, you MUST first check:
+**IMPORTANT**: This project uses `create-qa-architect` for CI/CD quality gates. Before suggesting or creating ANY new GitHub Actions workflows for lint/test/security/formatting, you MUST first check:
 
 1. `.github/workflows/quality.yml` — already exists and handles all quality checks
 2. `.qualityrc.json` — CQA configuration file
