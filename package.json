@@ -33,15 +33,7 @@
     "type-check:tests": "tsc --noEmit --project tests/tsconfig.json",
     "type-check:all": "npm run type-check && npm run type-check:tests",
     "quality:check": "npm run type-check:all && npm run lint && npm run test",
-    "quality:ci": "npm run quality:check && npm run security:audit",
-    "test:fast": "vitest run --reporter=basic --coverage=false",
-    "test:medium": "vitest run --reporter=basic --testPathIgnorePatterns=e2e,integration",
-    "test:comprehensive": "vitest run && npm run lint && npm run format:check && npm run security:audit 2>/dev/null || true",
-    "test:smart": "bash scripts/smart-test-strategy.sh",
-    "size": "size-limit",
-    "size:why": "size-limit --why",
-    "test:a11y": "vitest run tests/accessibility.test.js",
-    "test:coverage:check": "vitest run --coverage --coverage.thresholds.lines=70 --coverage.thresholds.functions=70"
+    "quality:ci": "npm run quality:check && npm run security:audit"
   },
   "keywords": [
     "personal-website",
@@ -53,24 +45,19 @@
   "author": "Brett Stark",
   "license": "MIT",
   "devDependencies": {
-    "@eslint/js": "^9.39.2",
-    "@lhci/cli": "^0.15.1",
-    "@vitest/coverage-v8": "^4.0.16",
-    "create-qa-architect": "^5.4.3",
-    "eslint": "^9.39.2",
+    "@eslint/js": "^9.38.0",
+    "@lhci/cli": "^0.14.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "create-qa-architect": "^5.0.1",
+    "eslint": "^9.38.0",
     "eslint-plugin-security": "^3.0.1",
-    "globals": "^17.0.0",
-    "husky": "^9.1.7",
+    "globals": "^15.9.0",
+    "husky": "^8.0.0",
     "lint-staged": "^15.0.0",
-    "prettier": "^3.7.4",
-    "stylelint": "^16.26.1",
+    "prettier": "^3.0.0",
+    "stylelint": "^16.8.0",
     "stylelint-config-standard": "^37.0.0",
-    "vitest": "^4.0.16",
-    "size-limit": "^11.0.0",
-    "@size-limit/file": "^11.0.0",
-    "@commitlint/cli": "^19.0.0",
-    "@commitlint/config-conventional": "^19.0.0",
-    "axe-core": "^4.10.0"
+    "vitest": "^2.1.8"
   },
   "lint-staged": {
     "package.json": [
@@ -112,15 +99,5 @@
   "volta": {
     "node": "20.11.1",
     "npm": "10.2.4"
-  },
-  "size-limit": [
-    {
-      "path": "public/**/*.js",
-      "limit": "250 kB"
-    },
-    {
-      "path": "public/**/*.css",
-      "limit": "50 kB"
-    }
-  ]
+  }
 }

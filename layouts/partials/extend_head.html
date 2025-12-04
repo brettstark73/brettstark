@@ -13,3 +13,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ $i32.RelPermalink }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ $i16.RelPermalink }}">
 {{- end -}}
+
+{{/* Vercel Web Analytics - only in production */}}
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+{{- end -}}
