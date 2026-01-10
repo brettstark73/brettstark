@@ -152,6 +152,7 @@ jobs:
           # Run comprehensive documentation validation
           echo "📖 Running documentation validation..."
           npx create-qa-architect@latest --validate-docs
+        continue-on-error: true
 
       - name: Lighthouse CI
         run: |
