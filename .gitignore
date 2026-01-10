@@ -8,5 +8,11 @@ node_modules
 *.backup
 *.tags-backup
 
+# Environment and secrets
+.env*
+
+# Logs
+*.log
+
 # Lighthouse CI artifacts
 .lighthouseci/
