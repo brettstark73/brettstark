@@ -38,10 +38,7 @@ function convertFile(file) {
     let im,
       imgs = []
     while ((im = imgRe.exec(inner))) {
-      const raw = im[1]
-        .trim()
-        .replace(/^\"|\"$/g, '')
-        .replace(/^'|'$/g, '')
+      const raw = im[1].trim().replace(/^"|"$/g, '').replace(/^'|'$/g, '')
       if (/^(\.\/)?images\//.test(raw)) imgs.push(raw.replace(/^\.\//, ''))
     }
     result += src.slice(lastIndex, sIdx)
