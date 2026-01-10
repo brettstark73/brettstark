@@ -20,8 +20,6 @@ function findMarkdownFiles(dir) {
 function fix(file) {
   const src = fs.readFileSync(file, 'utf8')
   const openRe = /\{\{<\s*photogrid\s+images=(?:'[^']+'|"[^"]+")\s*>\}\}/g
-  const closeRe = /\{\{<\s*\/photogrid\s*>\}\}/g
-  let changed = false
   // If file contains an open with images but no close, append close immediately after each open
   if (openRe.test(src)) {
     // reset lastIndex
@@ -32,7 +30,6 @@ function fix(file) {
     while ((m = openRe.exec(src))) {
       out += src.slice(last, m.index) + m[0] + '{{< /photogrid >}}'
       last = openRe.lastIndex
-      changed = true
     }
     out += src.slice(last)
     // Avoid duplicating if a close already exists right after

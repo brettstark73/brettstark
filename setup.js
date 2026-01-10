@@ -9,7 +9,7 @@ console.log('🚀 Setting up Quality Automation Template...\n')
 // Check if we're in a git repository
 try {
   execSync('git status', { stdio: 'ignore' })
-} catch (error) {
+} catch {
   console.error('❌ This must be run in a git repository')
   console.log('Run "git init" first, then try again.')
   process.exit(1)
