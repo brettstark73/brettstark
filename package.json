@@ -59,7 +59,7 @@
     "create-qa-architect": "^5.4.3",
     "eslint": "^9.39.2",
     "eslint-plugin-security": "^3.0.1",
-    "globals": "^15.9.0",
+    "globals": "^17.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.0.0",
     "prettier": "^3.7.4",
