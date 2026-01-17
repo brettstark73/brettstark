@@ -16,3 +16,5 @@ node_modules
 
 # Lighthouse CI artifacts
 .lighthouseci/
+# QA Architect license files
+.qa-architect/
