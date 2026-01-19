@@ -4,7 +4,7 @@
   "description": "Brett Stark's personal website - Technology, Space, Travel, and Photography",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky",
+    "prepare": "[ \"$CI\" = \"true\" ] && echo 'Skipping Husky in CI' || husky",
     "dev": "hugo server -D",
     "dev:full": "hugo server -D --disableFastRender",
     "build": "hugo --gc --minify",
