@@ -21,15 +21,10 @@ Currently serving as Director of Program Management in automotive electronics, l
 
 ## AI Initiatives
 
-### AI Second Act
+### BuildProven
 
-Helping mid-career professionals master AI strategy for operating executives.
-[www.aisecondact.com](https://www.aisecondact.com/)
-
-### Vibe Build Lab
-
-Teaching professionals rapid AI prototyping without traditional coding barriers.
-[www.vibebuildlab.com](https://www.vibebuildlab.com/)
+Helping mid-career professionals master AI strategy and rapid AI prototyping without traditional coding barriers.
+[www.buildproven.ai](https://www.buildproven.ai/)
 
 ## Personal Background
 
@@ -46,7 +41,7 @@ From Tom Price, raised in Adelaide Hills, now living in Libertyville, IL.
 
 - **Main Blog**: [brettstark.com](https://brettstark.com/)
 - **About Me (Extended)**: [about.brettstark.com](https://about.brettstark.com/)
-- **AI Resources**: [aisecondact.com](https://www.aisecondact.com/), [vibebuildlab.com](https://www.vibebuildlab.com/)
+- **AI Resources**: [buildproven.ai](https://www.buildproven.ai/)
 - **Social**: [LinkedIn](https://linkedin.com/in/brettstark), [Twitter/X](https://twitter.com/brettstark), [Instagram](https://www.instagram.com/brettstark/)
 
 ## Contact
