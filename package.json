@@ -71,7 +71,7 @@
     "size-limit": "^11.0.0",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^37.0.0",
-    "vitest": "^2.1.8"
+    "vitest": "^4.0.18"
   },
   "lint-staged": {
     "package.json": [
