@@ -100,4 +100,33 @@ See `.claude-setup/docs/GITHUB-ACTIONS-POLICY.md` — minimal workflow mode, no 
 
 ---
 
-**Last Updated:** 2026-03-01
+**Last Updated:** 2026-03-08
+
+---
+
+## Agent Workflow
+
+### Session Start
+
+Load codebase context before exploring:
+
+```
+Read docs/dev_guide/CONVENTIONS.md
+```
+
+### Planning Complex Work
+
+Before implementing anything spanning multiple files:
+
+```
+/bs:plan <feature-name>
+```
+
+Plans live in docs/plans/ and survive context resets.
+
+### Session Handoff
+
+```
+/bs:context --save   # before ending session or running /compact
+/bs:context --resume # at start of new session
+```
