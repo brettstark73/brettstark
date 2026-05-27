@@ -34,8 +34,8 @@
     "type-check:all": "npm run type-check && npm run type-check:tests",
     "quality:check": "npm run type-check:all && npm run lint && npm run test",
     "quality:ci": "npm run quality:check && npm run security:audit",
-    "test:fast": "vitest run --reporter=basic --coverage=false",
-    "test:medium": "vitest run --reporter=basic --testPathIgnorePatterns=e2e,integration",
+    "test:fast": "vitest run --reporter=dot --coverage=false",
+    "test:medium": "vitest run --reporter=dot",
     "test:comprehensive": "vitest run && npm run lint && npm run format:check && npm run security:audit 2>/dev/null || true",
     "test:smart": "bash scripts/smart-test-strategy.sh",
     "size": "size-limit",
@@ -64,9 +64,9 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.39.2",
-    "@lhci/cli": "^0.15.1",
+    "@lhci/cli": "^0.1.0",
     "@size-limit/file": "^11.0.0",
-    "@vitest/coverage-v8": "^2.1.8",
+    "@vitest/coverage-v8": "^4.1.7",
     "axe-core": "^4.10.0",
     "commitlint": "^20.4.1",
     "eslint": "^9.39.2",
@@ -81,7 +81,7 @@
     "size-limit": "^11.0.0",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^37.0.0",
-    "vitest": "^2.1.8"
+    "vitest": "^4.1.7"
   },
   "lint-staged": {
     "package.json": [
@@ -116,6 +116,10 @@
       "stylelint --fix",
       "prettier --write"
     ]
+  },
+  "overrides": {
+    "tmp": "0.2.6",
+    "uuid": ">=11.1.1"
   },
   "engines": {
     "node": ">=20"
