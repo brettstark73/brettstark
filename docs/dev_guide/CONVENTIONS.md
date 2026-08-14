@@ -11,7 +11,7 @@
 
 Personal Hugo blog deployed on Vercel at brettstark.com, covering Technology, Space, Travel, and Photography. Content is authored in Markdown as Hugo page bundles; theme styling is extended via layout overrides and custom CSS.
 
-**Tech stack:** Hugo 0.150.0 (extended), PaperMod theme (Git submodule), Node.js 20+ tooling (ESLint 9, Prettier, Stylelint, Vitest, Lighthouse CI), Vercel hosting
+**Tech stack:** Hugo 0.150.0 (extended), vendored PaperMod theme, Node.js 20+ tooling (ESLint 9, Prettier, Stylelint, Vitest, Lighthouse CI), Vercel hosting
 **Entry point:** `hugo server -D` or `npm run dev`
 
 ---
@@ -25,7 +25,7 @@ brettstark/
 ├── layouts/              # Layout overrides extending PaperMod theme
 ├── assets/css/extended/  # Custom CSS (extends theme styles)
 ├── static/               # Passthrough files: favicons, large media
-├── themes/hugo-papermod/ # Theme as Git submodule (do not edit directly)
+├── themes/hugo-papermod/ # Vendored theme source (do not customize directly)
 ├── scripts/              # Bash helpers: image optimization, SEO, smart test
 ├── tests/                # Vitest test suite
 ├── public/               # Build output (generated, do not commit)
@@ -83,8 +83,7 @@ brettstark/
 ## Running the Project
 
 ```bash
-# Install (first time)
-git submodule update --init --recursive
+# Install (first time; the theme is already included)
 npm install
 
 # Run dev server
@@ -117,8 +116,7 @@ npm run security:secrets  # scan for hardcoded secrets
 
 ## Agent Gotchas
 
-- **Never edit theme directly:** All theme customizations go in `layouts/` (overrides) or `assets/css/extended/` (styles). Edits to `themes/hugo-papermod/` are lost on submodule updates.
-- **Submodule init required:** After cloning, run `git submodule update --init --recursive` or the site won't build.
+- **Never customize the vendored theme directly:** Put layout changes in `layouts/` and style changes in `assets/css/extended/`. Replace the vendored directory only during a reviewed upstream theme update.
 - **Git LFS required:** Large media files use LFS — run `git lfs install` before committing images.
 - **Hugo extended required:** The extended variant is needed for SCSS processing. Plain Hugo will fail.
 - **public/ and resources/ are generated:** Never commit these; they're in `.gitignore`.

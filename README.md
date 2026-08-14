@@ -9,7 +9,7 @@ Personal site built with Hugo and the PaperMod theme. Content is organized as pa
 - `layouts/` — layout overrides extending `themes/hugo-papermod/`.
 - `assets/` — custom CSS/JS; extended styles in `assets/css/extended/`.
 - `static/` — passthrough files (favicons, large media, etc.).
-- `themes/hugo-papermod/` — theme as a Git submodule.
+- `themes/hugo-papermod/` — vendored PaperMod theme source.
 - `public/`, `resources/` — build artefacts (generated).
 
 ## Prerequisites
@@ -21,8 +21,7 @@ Personal site built with Hugo and the PaperMod theme. Content is organized as pa
 ## Setup
 
 ```bash
-git submodule update --init --recursive  # theme
-npm install                               # tooling
+npm install  # tooling; the theme is included in this repository
 ```
 
 ## Local Development
@@ -66,4 +65,4 @@ Deployed via Vercel using `vercel.json`. Keep `HUGO_VERSION` aligned in deployme
 ## Notes
 
 - Secrets belong in Vercel or GitHub Action secrets; do not commit secrets in `hugo.toml` or front matter.
-- If you just cloned the repo, ensure the theme submodule is initialized (see Setup).
+- The PaperMod source is included in the repository; no submodule setup is needed.
