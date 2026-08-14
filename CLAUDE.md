@@ -9,7 +9,7 @@
 | Layer     | Technology                      |
 | --------- | ------------------------------- |
 | Generator | Hugo 0.150.0 (extended)         |
-| Theme     | PaperMod (Git submodule)        |
+| Theme     | PaperMod (vendored source)      |
 | Hosting   | Vercel                          |
 | Quality   | ESLint 9 + Prettier + Stylelint |
 
@@ -35,7 +35,7 @@ brettstark/
 ├── assets/css/extended/ # Custom CSS
 ├── layouts/             # Layout overrides
 ├── static/              # Static assets
-└── themes/hugo-papermod/ # Theme (submodule)
+└── themes/hugo-papermod/ # Vendored theme source
 ```
 
 ## Content Structure
@@ -77,14 +77,14 @@ hugo new posts/my-new-post/index.md
 ### Update Theme
 
 ```bash
-cd themes/hugo-papermod && git pull origin master && cd ../..
+# Replace the directory from a reviewed upstream PaperMod release.
 git add themes/hugo-papermod && git commit -m "chore: update theme"
 ```
 
 ## What NOT to Do
 
 - Don't edit theme files directly (use `layouts/` overrides)
-- Don't commit to `themes/hugo-papermod/` (submodule)
+- Don't edit vendored theme files for site customization; use `layouts/` overrides
 - Don't use `--no-verify` on commits
 - Don't add large files without Git LFS
 
