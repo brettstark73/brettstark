@@ -96,7 +96,7 @@ _See README for setup. Global rules in `~/.claude/CLAUDE.md`._
 
 ## GitHub Actions Policy
 
-See `.claude-setup/docs/GITHUB-ACTIONS-POLICY.md` — minimal workflow mode, no new workflows.
+Minimal workflow mode: do not add new workflows.
 
 ## Pre-Action Checklist
 

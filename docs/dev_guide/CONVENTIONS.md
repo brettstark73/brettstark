@@ -120,7 +120,7 @@ npm run security:secrets  # scan for hardcoded secrets
 - **Git LFS required:** Large media files use LFS — run `git lfs install` before committing images.
 - **Hugo extended required:** The extended variant is needed for SCSS processing. Plain Hugo will fail.
 - **public/ and resources/ are generated:** Never commit these; they're in `.gitignore`.
-- **No new GitHub Actions workflows:** Per `.claude-setup/docs/GITHUB-ACTIONS-POLICY.md`, minimal workflow mode is in effect — do not add new workflows.
+- **No new GitHub Actions workflows:** Minimal workflow mode is in effect — do not add new workflows.
 - **Conventional commits enforced:** commitlint runs via Husky; use `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `perf:`, `test:`, `build:`, `ci:`.
 
 Required env vars: Secrets live in Vercel and GitHub Actions secrets. See `SECURITY.md`. Do not add secrets to `hugo.toml` or front matter.
