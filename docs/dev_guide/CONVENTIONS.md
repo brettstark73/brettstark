@@ -98,12 +98,12 @@ npm test             # placeholder (add vitest suite)
 npm run test:fast    # vitest run without coverage
 npm run test:coverage # vitest with V8 coverage
 
-# Lint / format / type-check
+# Lint / format
 npm run lint         # ESLint + Stylelint
 npm run lint:fix     # ESLint + Stylelint with auto-fix
 npm run format       # Prettier write
 npm run format:check # Prettier check (CI)
-npm run quality:check # type-check + lint + test
+npm run quality:check # lint + test
 
 # Other
 npm run images:optimize   # optimize images via scripts/

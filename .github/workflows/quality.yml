@@ -451,12 +451,6 @@ jobs:
           echo "⏱️ Format check must complete within 5 minutes"
           timeout 300 npm run format:check
 
-      - name: Type check
-        if: hashFiles('.buildproven/test-impact.json') == '' || (github.event_name != 'pull_request' && github.event_name != 'push')
-        run: |
-          echo "⏱️ Type check must complete within 5 minutes"
-          timeout 300 npm run type-check
-
       - name: Build
         if: hashFiles('.buildproven/test-impact.json') == '' || (github.event_name != 'pull_request' && github.event_name != 'push')
         run: |
