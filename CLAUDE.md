@@ -156,7 +156,7 @@ Read docs/dev_guide/CONVENTIONS.md
 Before implementing anything spanning multiple files:
 
 ```
-/bs:plan <feature-name>
+Use plan mode; save the plan to docs/plans/<feature-name>.md
 ```
 
 Plans live in docs/plans/ and survive context resets.
@@ -164,6 +164,6 @@ Plans live in docs/plans/ and survive context resets.
 ### Session Handoff
 
 ```
-/bs:context --save   # before ending session or running /compact
-/bs:context --resume # at start of new session
+/handoff save   # before ending session or running /compact (pushes the branch, leaves a note on its PR)
+/handoff resume # at start of new session, on any computer or in the cloud
 ```
