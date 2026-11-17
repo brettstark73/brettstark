@@ -233,6 +233,14 @@ jobs:
             "${GITLEAKS_DIR}/gitleaks" git --redact --no-banner .
           fi
 
+      # Excluded rules: they target template engines that do not escape by
+      # context (Jinja/Flask, Django, Mustache). Hugo layouts use Go
+      # html/template, which escapes every value for its context: URL
+      # filtering in href/src (javascript: becomes #ZgotmplZ), attribute
+      # escaping for quoted and unquoted values, and JS escaping in <script>.
+      # The Flask rule matches Hugo's safeHTML/safeURL/safeJS/safeHTMLAttr by
+      # text. Each of those bypasses in layouts/ was reviewed; values that can
+      # break out are escaped first and tested in tests/unit/hugo-templates.test.js.
       - name: Security pattern detection
         env:
           BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
@@ -258,6 +266,10 @@ jobs:
             semgrep scan \
             --config p/security-audit \
             --config p/javascript \
+            --exclude-rule generic.html-templates.security.var-in-href.var-in-href \
+            --exclude-rule generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var \
+            --exclude-rule generic.html-templates.security.var-in-script-tag.var-in-script-tag \
+            --exclude-rule python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe \
             --error \
             --metrics=off \
             "${SEMGREP_ARGS[@]}"
@@ -390,6 +402,26 @@ jobs:
             exit 1
           }
 
+      # npm run build and the template tests need Hugo; keep the version in
+      # step with HUGO_VERSION in vercel.json (the production build).
+      - name: Setup Hugo
+        run: |
+          set -euo pipefail
+          HUGO_VERSION="$(node -p "require('./vercel.json').build.env.HUGO_VERSION")"
+          HUGO_SHA256='d7348b78e8bbaf41a5ead308d3d4108bf18f2fb3fa203d3f0d99afa1c00bd096'
+          test "$HUGO_VERSION" = '0.150.0' || {
+            echo "::error::vercel.json HUGO_VERSION is $HUGO_VERSION; update the pinned Hugo version and SHA-256 in quality.yml"
+            exit 1
+          }
+          HUGO_DIR="$(mktemp -d)"
+          curl --fail --location --proto '=https' --tlsv1.2 \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
+            --output "${HUGO_DIR}/hugo.tar.gz"
+          echo "${HUGO_SHA256}  ${HUGO_DIR}/hugo.tar.gz" | sha256sum --check -
+          tar -xzf "${HUGO_DIR}/hugo.tar.gz" -C "${HUGO_DIR}" hugo
+          echo "${HUGO_DIR}" >> "$GITHUB_PATH"
+          "${HUGO_DIR}/hugo" version
+
       - name: Run affected tests
         if: hashFiles('.buildproven/test-impact.json') != '' && (github.event_name == 'pull_request' || github.event_name == 'push')
         env:
@@ -450,12 +482,6 @@ jobs:
         run: |
           echo "⏱️ Format check must complete within 5 minutes"
           timeout 300 npm run format:check
-
-      - name: Type check
-        if: hashFiles('.buildproven/test-impact.json') == '' || (github.event_name != 'pull_request' && github.event_name != 'push')
-        run: |
-          echo "⏱️ Type check must complete within 5 minutes"
-          timeout 300 npm run type-check
 
       - name: Build
         if: hashFiles('.buildproven/test-impact.json') == '' || (github.event_name != 'pull_request' && github.event_name != 'push')

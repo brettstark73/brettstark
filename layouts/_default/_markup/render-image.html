@@ -1,7 +1,7 @@
 {{/* Responsive image render hook with srcset, width/height, and sane fallbacks */}}
 {{- $u := urls.Parse .Destination -}}
 {{- $src := $u.String -}}
-{{- $alt := .Text | default .Title | default .Page.Title -}}
+{{- $alt := .PlainText | default .Title | default .Page.Title -}}
 {{- $loading := .Attributes.loading | default "lazy" -}}
 {{- $decoding := .Attributes.decoding | default "async" -}}
 
@@ -55,11 +55,12 @@
       {{- $resolvedSrc = (path.Join .Page.RelPermalink $src) -}}
     {{- end -}}
   {{- end -}}
-  {{- $attributes := merge .Attributes (dict "alt" $alt "src" $resolvedSrc "title" (.Title | transform.HTMLEscape) "loading" $loading "decoding" $decoding) -}}
+  {{- $attributes := merge .Attributes (dict "alt" $alt "src" $resolvedSrc "title" .Title "loading" $loading "decoding" $decoding) -}}
+  {{/* safeHTMLAttr skips escaping: HTML-escape each value and quote with ". Go %q quoting is not HTML quoting. */}}
   <img
     {{- range $k, $v := $attributes -}}
       {{- if $v -}}
-        {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+        {{- printf " %s=\"%s\"" $k ($v | transform.HTMLEscape) | safeHTMLAttr -}}
       {{- end -}}
     {{- end -}}>
 {{- end -}}
