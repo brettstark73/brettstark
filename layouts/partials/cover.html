@@ -19,7 +19,8 @@
     {{- end -}}
 
     {{- $imgParam := .Params.cover.image -}}
-    {{- $imgdl := $imgParam | safeURL }}
+    {{- /* No safeURL: keep html/template URL filtering so a javascript: cover cannot reach href/src */}}
+    {{- $imgdl := $imgParam }}
     {{- if $cover -}}
         {{- $imgdl = $cover.RelPermalink }}
     {{- else if not (or (hasPrefix $imgParam "http://") (hasPrefix $imgParam "https://") (hasPrefix $imgParam "//")) }}
